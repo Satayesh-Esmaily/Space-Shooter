@@ -122,7 +122,9 @@ updateBullets();
 updateEnemies();
 
 
-    drawBullets();
+drawPlayer();
+
+drawBullets();
 
 
     requestAnimationFrame(gameLoop);
