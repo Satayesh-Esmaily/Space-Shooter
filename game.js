@@ -267,7 +267,10 @@ function gameLoop(){
 
     updateEnemies();
 
-    checkCollisions();
+    createExplosion(
+    enemy.x + enemy.width / 2,
+    enemy.y + enemy.height / 2
+);
 
     checkEnemyCollision();
 
