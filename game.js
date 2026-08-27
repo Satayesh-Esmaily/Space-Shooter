@@ -82,7 +82,21 @@ function updatePlayer() {
     }
 }
 
+function shoot() {
 
+    bullets.push({
+
+        x: player.x + player.width / 2 - 2,
+
+        y: player.y,
+
+        width: 5,
+
+        height: 15,
+
+        speed: 8
+    });
+}
 
 // Game loop
 function gameLoop() {
