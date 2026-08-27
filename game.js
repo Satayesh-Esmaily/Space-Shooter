@@ -274,6 +274,11 @@ function checkCollisions(){
 
             }
 
+        }
+
+    }
+
+}
 setInterval(()=>{
 
     createEnemy();
