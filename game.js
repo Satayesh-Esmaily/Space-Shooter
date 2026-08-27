@@ -76,6 +76,28 @@ function drawPlayer() {
     ctx.fill();
 }
 
+function drawStars(){
+
+    ctx.fillStyle = "white";
+
+
+    stars.forEach((star)=>{
+
+        ctx.beginPath();
+
+        ctx.arc(
+            star.x,
+            star.y,
+            star.size,
+            0,
+            Math.PI * 2
+        );
+
+        ctx.fill();
+
+    });
+
+}
 
 // Move player
 const keys = {};
