@@ -208,4 +208,6 @@ function updateEnemies(){
 
     enemies.forEach((enemy)=>{
 
+        enemy.y += enemy.speed;
+
 gameLoop();
