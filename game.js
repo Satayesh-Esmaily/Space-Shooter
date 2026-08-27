@@ -13,7 +13,7 @@ const player = {
     height: 40,
     speed: 5
 };
-
+const explosions = [];
 const bullets = [];
 const enemies = [];
 let score = 0;
@@ -34,6 +34,22 @@ for(let i = 0; i < 100; i++){
         size: Math.random() * 3,
 
         speed: Math.random() * 2 + 1
+
+    });
+
+}
+
+function createExplosion(x,y){
+
+    explosions.push({
+
+        x:x,
+
+        y:y,
+
+        radius:5,
+
+        alpha:1
 
     });
 
@@ -188,7 +204,7 @@ function gameLoop(){
     );
 
     updateStars();
-    
+
     updatePlayer();
 
     updateBullets();
