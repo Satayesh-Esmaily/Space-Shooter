@@ -224,4 +224,7 @@ function updateEnemies(){
         }
 
     }
+
+}
+
 gameLoop();
