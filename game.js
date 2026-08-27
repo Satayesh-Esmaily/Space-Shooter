@@ -99,6 +99,29 @@ function drawStars(){
 
 }
 
+
+function updateStars(){
+
+    stars.forEach((star)=>{
+
+
+        star.y += star.speed;
+
+
+        if(star.y > canvas.height){
+
+            star.y = 0;
+
+            star.x = Math.random() * canvas.width;
+
+        }
+
+
+    });
+
+}
+
+
 // Move player
 const keys = {};
 
