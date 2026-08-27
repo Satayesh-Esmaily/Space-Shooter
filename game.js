@@ -239,6 +239,11 @@ function checkCollisions(){
     for(let i = bullets.length - 1; i >= 0; i--){
 
         for(let j = enemies.length - 1; j >= 0; j--){
+
+
+            const bullet = bullets[i];
+            const enemy = enemies[j];
+
 setInterval(()=>{
 
     createEnemy();
