@@ -269,6 +269,11 @@ function checkCollisions(){
 
 
                 updateScore();
+
+                break;
+
+            }
+
 setInterval(()=>{
 
     createEnemy();
