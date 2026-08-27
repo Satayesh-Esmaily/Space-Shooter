@@ -210,4 +210,7 @@ function updateEnemies(){
 
         enemy.y += enemy.speed;
 
+    });
+
+
 gameLoop();
