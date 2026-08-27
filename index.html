@@ -1,49 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space Shooter</title>
+
+    <title>Space Shooter 3D</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
-    <div class="game-container">
 
-        <div class="hud">
+    <!-- Start Menu -->
+    <div id="menu">
 
-            <div class="score-box">
-                🏆 Score:
-                <span id="score">0</span>
-            </div>
-
-
-            <div class="health-box">
-                ❤️ Health:
-                <span id="health">100</span>
-            </div>
-
-        </div>
+        <h1>
+            🚀 Space Shooter 3D
+        </h1>
 
 
-        <canvas id="gameCanvas"></canvas>
+        <p>
+            Defend the galaxy
+        </p>
 
 
-        <div id="gameOver" class="game-over">
-
-            <h1>GAME OVER</h1>
-
-            <button id="restart">
-                Restart 🚀
-            </button>
-
-        </div>
+        <button id="startButton">
+            Start Game
+        </button>
 
     </div>
 
 
-<script src="game.js"></script>
-<script type="module" src="./src/main.js"></script>
+
+    <!-- Game UI -->
+
+    <div class="game-container">
+
+
+        <!-- HUD -->
+
+        <div class="hud">
+
+
+            <div class="score-box">
+
+                🏆 Score:
+
+                <span id="score">
+                    0
+                </span>
+
+            </div>
+
+
+
+            <div class="health-box">
+
+                ❤️ Health:
+
+                <span id="health">
+                    100
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- Game Over -->
+
+        <div id="gameOver" class="game-over">
+
+
+            <h1>
+                GAME OVER
+            </h1>
+
+
+            <button id="restart">
+
+                Restart 🚀
+
+            </button>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <!-- Three.js Main File -->
+
+    <script type="module" src="./src/main.js"></script>
+
+
 </body>
+
 </html>
