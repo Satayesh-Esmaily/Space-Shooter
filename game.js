@@ -119,9 +119,8 @@ updatePlayer();
 
 updateBullets();
 
-    updateBullets();
+updateEnemies();
 
-    drawPlayer();
 
     drawBullets();
 
