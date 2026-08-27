@@ -244,6 +244,11 @@ function checkCollisions(){
             const bullet = bullets[i];
             const enemy = enemies[j];
 
+
+            if(
+
+                bullet.x < enemy.x + enemy.width &&
+
 setInterval(()=>{
 
     createEnemy();
