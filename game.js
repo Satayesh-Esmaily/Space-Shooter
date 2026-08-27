@@ -21,12 +21,36 @@ function drawPlayer() {
 
     ctx.fillStyle = "cyan";
 
+   
     ctx.fillRect(
         player.x,
         player.y,
         player.width,
         player.height
     );
+
+
+  
+    ctx.beginPath();
+
+    ctx.moveTo(
+        player.x + player.width / 2,
+        player.y - 20
+    );
+
+    ctx.lineTo(
+        player.x,
+        player.y
+    );
+
+    ctx.lineTo(
+        player.x + player.width,
+        player.y
+    );
+
+    ctx.closePath();
+
+    ctx.fill();
 }
 
 
