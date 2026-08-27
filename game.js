@@ -231,4 +231,6 @@ setInterval(()=>{
 
     createEnemy();
 
+},1000);
+
 gameLoop();
