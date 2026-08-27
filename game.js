@@ -228,4 +228,5 @@ function updateEnemies(){
 }
 
 setInterval(()=>{
+
 gameLoop();
