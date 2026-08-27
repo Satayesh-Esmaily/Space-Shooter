@@ -270,7 +270,9 @@ function gameLoop(){
     createExplosion(
     enemy.x + enemy.width / 2,
     enemy.y + enemy.height / 2
-);
+    );
+
+    enemies.splice(j,1);
 
     checkEnemyCollision();
 
