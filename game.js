@@ -213,4 +213,7 @@ function updateEnemies(){
     });
 
 
+    
+
+    for(let i = enemies.length - 1; i >= 0; i--){
 gameLoop();
