@@ -115,8 +115,9 @@ function gameLoop() {
         canvas.height
     );
 
+updatePlayer();
 
-    updatePlayer();
+updateBullets();
 
     updateBullets();
 
