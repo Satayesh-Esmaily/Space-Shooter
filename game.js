@@ -128,6 +128,7 @@ drawBullets();
 
 drawEnemies();
 
+
     requestAnimationFrame(gameLoop);
 }
 
