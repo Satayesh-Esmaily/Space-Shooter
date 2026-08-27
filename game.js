@@ -286,6 +286,7 @@ function updateScore(){
         `Score: ${score}`;
 
 }
+
 setInterval(()=>{
 
     createEnemy();
