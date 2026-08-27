@@ -109,7 +109,12 @@ function shoot() {
 }
 
 // Game loop
-function gameLoop() {
+function gameLoop(){
+
+    if(gameOver){
+        return;
+    }
+
 
     ctx.clearRect(
         0,
@@ -118,23 +123,27 @@ function gameLoop() {
         canvas.height
     );
 
-     updatePlayer();
 
-     updateBullets();
+    updatePlayer();
 
-     updateEnemies();
+    updateBullets();
 
-     checkCollisions();
+    updateEnemies();
+
+    checkCollisions();
+
+    checkEnemyCollision();
 
 
-     drawPlayer();
+    drawPlayer();
 
-     drawBullets();
+    drawBullets();
 
-     drawEnemies();
+    drawEnemies();
 
 
     requestAnimationFrame(gameLoop);
+
 }
 
 function drawBullets() {
@@ -228,9 +237,13 @@ function updateEnemies(){
 
         if(enemies[i].y > canvas.height){
 
-            enemies.splice(i,1);
+         enemies.splice(i,1);
 
-        }
+         health -= 10;
+
+       updateHealth();
+
+}
 
     }
 
@@ -295,6 +308,76 @@ function updateScore(){
         `Score: ${score}`;
 
 }
+
+function checkEnemyCollision(){
+
+    for(let i = enemies.length - 1; i >= 0; i--){
+
+        const enemy = enemies[i];
+
+
+        if(
+
+            enemy.x < player.x + player.width &&
+
+            enemy.x + enemy.width > player.x &&
+
+            enemy.y < player.y + player.height &&
+
+            enemy.y + enemy.height > player.y
+
+        ){
+
+            enemies.splice(i,1);
+
+            health -= 20;
+
+            updateHealth();
+
+        }
+
+    }
+
+}
+
+
+function endGame(){
+
+    gameOver = true;
+
+
+    document.getElementById("gameOver").style.display =
+        "block";
+
+
+    document.getElementById("restart").style.display =
+        "inline-block";
+
+}
+
+function updateHealth(){
+
+    document.getElementById("health").innerText =
+        `Health: ${health}`;
+
+
+    if(health <= 0){
+
+        endGame();
+
+    }
+
+}
+
+
+document
+.getElementById("restart")
+.addEventListener("click",()=>{
+
+    location.reload();
+
+});
+
 
 setInterval(()=>{
 
