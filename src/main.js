@@ -5,12 +5,29 @@ import {Player} from "./player";
 
 
 const player = new Player();
+let gameStarted = false;
 
+const startButton =
+document.getElementById("startButton");
+
+
+startButton.addEventListener(
+"click",
+()=>{
+
+    gameStarted=true;
+
+    document.getElementById("menu")
+    .style.display="none";
+
+});
 
 player.addTo(scene);
 // Scene
 const scene = new THREE.Scene();
 
+
+scene.background = new THREE.Color(0x020617);
 
 // Camera
 const camera = new THREE.PerspectiveCamera(
@@ -21,7 +38,13 @@ const camera = new THREE.PerspectiveCamera(
 );
 
 
-camera.position.z = 10;
+camera.position.set(
+    0,
+    0,
+    8
+);
+
+camera.lookAt(0,0,0);
 
 
 // Renderer
@@ -43,11 +66,26 @@ document.body.appendChild(
 
 // Light
 
-const light = new THREE.PointLight(
+const ambientLight = new THREE.AmbientLight(
     0xffffff,
-    100
+    1
 );
 
+scene.add(ambientLight);
+
+
+const pointLight = new THREE.PointLight(
+    0x00ffff,
+    20
+);
+
+pointLight.position.set(
+    0,
+    5,
+    5
+);
+
+scene.add(pointLight);
 
 light.position.set(
     0,
@@ -64,6 +102,13 @@ scene.add(light);
 function animate(){
 
     requestAnimationFrame(animate);
+
+
+    if(gameStarted){
+
+        // game update later
+
+    }
 
 
     renderer.render(
