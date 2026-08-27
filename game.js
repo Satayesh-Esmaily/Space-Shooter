@@ -122,5 +122,22 @@ function gameLoop() {
     requestAnimationFrame(gameLoop);
 }
 
+function drawBullets() {
+
+    ctx.fillStyle = "yellow";
+
+
+    bullets.forEach((bullet)=>{
+
+        ctx.fillRect(
+            bullet.x,
+            bullet.y,
+            bullet.width,
+            bullet.height
+        );
+
+    });
+
+}
 
 gameLoop();
