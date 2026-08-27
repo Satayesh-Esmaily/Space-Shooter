@@ -186,6 +186,14 @@ function createEnemy() {
     enemies.push(enemy);
 }
 
+function drawEnemies(){
+
+    ctx.fillStyle = "red";
+
+
+    enemies.forEach((enemy)=>{
+
+        ctx.fillRect(
             enemy.x,
             enemy.y,
             enemy.width,
