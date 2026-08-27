@@ -55,6 +55,34 @@ function createExplosion(x,y){
 
 }
 
+function drawExplosions(){
+
+    explosions.forEach((explosion)=>{
+
+
+        ctx.beginPath();
+
+
+        ctx.arc(
+            explosion.x,
+            explosion.y,
+            explosion.radius,
+            0,
+            Math.PI * 2
+        );
+
+
+        ctx.fillStyle =
+        `rgba(255,165,0,${explosion.alpha})`;
+
+
+        ctx.fill();
+
+
+    });
+
+}
+
 // Draw player
 function drawPlayer() {
 
