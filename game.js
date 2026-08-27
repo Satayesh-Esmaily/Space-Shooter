@@ -264,6 +264,11 @@ function checkCollisions(){
                 enemies.splice(j,1);
 
 
+                
+                score += 10;
+
+
+                updateScore();
 setInterval(()=>{
 
     createEnemy();
