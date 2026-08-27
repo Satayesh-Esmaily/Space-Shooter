@@ -58,9 +58,15 @@ function drawPlayer() {
 const keys = {};
 
 window.addEventListener("keydown", (event) => {
-    keys[event.key] = true;
-});
 
+    keys[event.key] = true;
+
+
+    if(event.code === "Space") {
+        shoot();
+    }
+
+});
 
 window.addEventListener("keyup", (event) => {
     keys[event.key] = false;
