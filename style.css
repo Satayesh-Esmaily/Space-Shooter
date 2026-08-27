@@ -1,12 +1,209 @@
-body {
-    margin: 0;
-    background: black;
-    color: white;
-    text-align: center;
-    font-family: Arial;
+*{
+    box-sizing:border-box;
 }
 
-canvas {
-    background: #111;
-    border: 2px solid white;
+
+body{
+
+    margin:0;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+    radial-gradient(
+        circle,
+        #172554,
+        #020617
+    );
+
+    font-family:
+    'Segoe UI',
+    sans-serif;
+
+    color:white;
+
+}
+
+
+.game-container{
+
+    position:relative;
+
+}
+
+
+canvas{
+
+    background:
+    linear-gradient(
+        #020617,
+        #000
+    );
+
+    border-radius:20px;
+
+    border:2px solid #38bdf8;
+
+
+    box-shadow:
+
+    0 0 20px #38bdf8,
+
+    0 0 60px rgba(56,189,248,.5);
+
+}
+
+
+
+.hud{
+
+    position:absolute;
+
+    top:20px;
+
+    left:20px;
+
+    right:20px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    z-index:10;
+
+}
+
+
+
+.score-box,
+.health-box{
+
+
+    padding:12px 20px;
+
+
+    background:
+
+    rgba(15,23,42,.8);
+
+
+    border:
+
+    1px solid #38bdf8;
+
+
+    border-radius:15px;
+
+
+    backdrop-filter:blur(10px);
+
+
+    font-size:20px;
+
+
+}
+
+
+
+.game-over{
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+    display:none;
+
+
+    flex-direction:column;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    background:
+
+    rgba(0,0,0,.75);
+
+
+    border-radius:20px;
+
+
+}
+
+
+
+.game-over h1{
+
+
+    font-size:60px;
+
+
+    color:#ef4444;
+
+
+    text-shadow:
+
+    0 0 20px red;
+
+
+}
+
+
+
+button{
+
+
+    padding:15px 40px;
+
+
+    border:none;
+
+
+    border-radius:30px;
+
+
+    font-size:20px;
+
+
+    cursor:pointer;
+
+
+    background:
+
+    #38bdf8;
+
+
+    color:#020617;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+button:hover{
+
+
+    transform:scale(1.1);
+
+
+    box-shadow:
+
+    0 0 30px #38bdf8;
+
+
 }
