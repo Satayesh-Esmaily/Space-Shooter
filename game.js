@@ -140,4 +140,25 @@ function drawBullets() {
 
 }
 
+function updateBullets(){
+
+    bullets.forEach((bullet)=>{
+
+        bullet.y -= bullet.speed;
+
+    });
+
+
+    for(let i = bullets.length - 1; i >= 0; i--){
+
+        if(bullets[i].y < 0){
+
+            bullets.splice(i,1);
+
+        }
+
+    }
+
+}
+
 gameLoop();
