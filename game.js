@@ -83,6 +83,34 @@ function drawExplosions(){
 
 }
 
+
+function updateExplosions(){
+
+    explosions.forEach((explosion)=>{
+
+        explosion.radius += 2;
+
+        explosion.alpha -= 0.03;
+
+    });
+
+
+    for(
+        let i = explosions.length - 1;
+        i >= 0;
+        i--
+    ){
+
+        if(explosions[i].alpha <= 0){
+
+            explosions.splice(i,1);
+
+        }
+
+    }
+
+}
+
 // Draw player
 function drawPlayer() {
 
