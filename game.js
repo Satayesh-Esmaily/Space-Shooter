@@ -187,7 +187,8 @@ function gameLoop(){
         canvas.height
     );
 
-
+    updateStars();
+    
     updatePlayer();
 
     updateBullets();
@@ -198,6 +199,7 @@ function gameLoop(){
 
     checkEnemyCollision();
 
+    updateStars();
 
     drawPlayer();
 
