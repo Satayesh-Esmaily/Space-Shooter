@@ -14,6 +14,7 @@ const player = {
     speed: 5
 };
 
+const bullets = [];
 
 // Draw player
 function drawPlayer() {
