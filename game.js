@@ -18,6 +18,7 @@ const bullets = [];
 const enemies = [];
 let score = 0;
 let health = 100;
+let gameOver = false;
 
 // Draw player
 function drawPlayer() {
