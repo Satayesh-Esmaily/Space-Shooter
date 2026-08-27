@@ -186,4 +186,14 @@ function createEnemy() {
     enemies.push(enemy);
 }
 
+            enemy.x,
+            enemy.y,
+            enemy.width,
+            enemy.height
+        );
+
+    });
+
+}
+
 gameLoop();
