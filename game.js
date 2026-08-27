@@ -282,6 +282,7 @@ function checkCollisions(){
 
 function updateScore(){
 
+    document.getElementById("score").innerText =
 setInterval(()=>{
 
     createEnemy();
