@@ -254,6 +254,11 @@ function checkCollisions(){
                 bullet.y < enemy.y + enemy.height &&
 
                 bullet.y + bullet.height > enemy.y
+
+            ){
+
+                
+                bullets.splice(i,1);
 setInterval(()=>{
 
     createEnemy();
