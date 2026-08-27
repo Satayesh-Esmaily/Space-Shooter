@@ -38,7 +38,11 @@ Math.PI / 2;
 
 
 
-this.mesh.position.y=-3;
+this.mesh.position.set(
+    0,
+    -2,
+    0
+);
 
 
 }
