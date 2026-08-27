@@ -259,6 +259,11 @@ function checkCollisions(){
 
                 
                 bullets.splice(i,1);
+
+
+                enemies.splice(j,1);
+
+
 setInterval(()=>{
 
     createEnemy();
