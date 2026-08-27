@@ -267,6 +267,8 @@ function gameLoop(){
 
     updateEnemies();
 
+    updateExplosions();
+
     createExplosion(
     enemy.x + enemy.width / 2,
     enemy.y + enemy.height / 2
@@ -283,6 +285,8 @@ function gameLoop(){
     drawBullets();
 
     drawEnemies();
+
+    drawExplosions();
 
 
     requestAnimationFrame(gameLoop);
