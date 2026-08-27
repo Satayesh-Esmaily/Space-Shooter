@@ -285,6 +285,7 @@ function updateScore(){
     document.getElementById("score").innerText =
         `Score: ${score}`;
 
+}
 setInterval(()=>{
 
     createEnemy();
