@@ -15,6 +15,7 @@ const player = {
 };
 
 const bullets = [];
+const enemies = [];
 
 // Draw player
 function drawPlayer() {
