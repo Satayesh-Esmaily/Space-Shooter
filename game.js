@@ -122,6 +122,8 @@ function gameLoop() {
 
      updateEnemies();
 
+     checkCollisions();
+
 
      drawPlayer();
 
