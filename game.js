@@ -115,18 +115,18 @@ function gameLoop() {
         canvas.height
     );
 
-updatePlayer();
+     updatePlayer();
 
-updateBullets();
+     updateBullets();
 
-updateEnemies();
+     updateEnemies();
 
 
-drawPlayer();
+     drawPlayer();
 
-drawBullets();
+     drawBullets();
 
-drawEnemies();
+     drawEnemies();
 
 
     requestAnimationFrame(gameLoop);
