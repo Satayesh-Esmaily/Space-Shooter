@@ -282,6 +282,13 @@ function checkCollisions(){
 
 }
 
+function updateHealth(){
+
+    document.getElementById("health").innerText =
+        `Health: ${health}`;
+
+}
+
 function updateScore(){
 
     document.getElementById("score").innerText =
