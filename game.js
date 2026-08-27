@@ -167,4 +167,23 @@ function updateBullets(){
 
 }
 
+function createEnemy() {
+
+    const enemy = {
+
+        x: Math.random() * (canvas.width - 50),
+
+        y: -50,
+
+        width: 50,
+
+        height: 40,
+
+        speed: 2
+    };
+
+
+    enemies.push(enemy);
+}
+
 gameLoop();
