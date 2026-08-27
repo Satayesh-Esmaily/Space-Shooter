@@ -1,33 +1,15 @@
 import * as THREE from 
 "https://cdn.jsdelivr.net/npm/three@0.180/build/three.module.js";
 
-import {Player} from "./player";
+
+import { Player } from "./Player.js";
 
 
-const player = new Player();
-let gameStarted = false;
-
-const startButton =
-document.getElementById("startButton");
-
-
-startButton.addEventListener(
-"click",
-()=>{
-
-    gameStarted=true;
-
-    document.getElementById("menu")
-    .style.display="none";
-
-});
-
-player.addTo(scene);
 // Scene
 const scene = new THREE.Scene();
 
-
 scene.background = new THREE.Color(0x020617);
+
 
 // Camera
 const camera = new THREE.PerspectiveCamera(
@@ -44,7 +26,9 @@ camera.position.set(
     8
 );
 
+
 camera.lookAt(0,0,0);
+
 
 
 // Renderer
@@ -64,20 +48,26 @@ document.body.appendChild(
 );
 
 
-// Light
 
-const ambientLight = new THREE.AmbientLight(
+// Lights
+
+const ambientLight =
+new THREE.AmbientLight(
     0xffffff,
     1
 );
 
+
 scene.add(ambientLight);
 
 
-const pointLight = new THREE.PointLight(
+
+const pointLight =
+new THREE.PointLight(
     0x00ffff,
     20
 );
+
 
 pointLight.position.set(
     0,
@@ -85,19 +75,43 @@ pointLight.position.set(
     5
 );
 
+
 scene.add(pointLight);
 
-light.position.set(
-    0,
-    5,
-    5
-);
 
 
-scene.add(light);
+// Player
+
+const player = new Player();
+
+player.addTo(scene);
 
 
-// Animation loop
+
+// Start Menu
+
+let gameStarted = false;
+
+
+const startButton =
+document.getElementById("startButton");
+
+
+startButton.addEventListener(
+"click",
+()=>{
+
+    gameStarted = true;
+
+
+    document.getElementById("menu")
+    .style.display="none";
+
+});
+
+
+
+// Animation Loop
 
 function animate(){
 
@@ -106,7 +120,7 @@ function animate(){
 
     if(gameStarted){
 
-        // game update later
+        // game updates will go here
 
     }
 
