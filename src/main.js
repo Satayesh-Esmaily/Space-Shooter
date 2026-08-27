@@ -1,7 +1,13 @@
 import * as THREE from 
 "https://cdn.jsdelivr.net/npm/three@0.180/build/three.module.js";
 
+import {Player} from "./player";
 
+
+const player = new Player();
+
+
+player.addTo(scene);
 // Scene
 const scene = new THREE.Scene();
 
