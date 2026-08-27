@@ -204,4 +204,8 @@ function drawEnemies(){
 
 }
 
+function updateEnemies(){
+
+    enemies.forEach((enemy)=>{
+
 gameLoop();
