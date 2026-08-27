@@ -116,7 +116,12 @@ function gameLoop() {
 
 
     updatePlayer();
+
+    updateBullets();
+
     drawPlayer();
+
+    drawBullets();
 
 
     requestAnimationFrame(gameLoop);
