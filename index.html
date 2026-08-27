@@ -9,26 +9,41 @@
 
 <body>
 
-    <h1>🚀 Space Shooter</h1>
+    <div class="game-container">
+
+        <div class="hud">
+
+            <div class="score-box">
+                🏆 Score:
+                <span id="score">0</span>
+            </div>
 
 
-    <canvas id="gameCanvas"></canvas>
+            <div class="health-box">
+                ❤️ Health:
+                <span id="health">100</span>
+            </div>
 
-    <h2 id="health">
-    Health: 100
-</h2>
+        </div>
 
-<h1 id="gameOver" style="display:none;">
-    GAME OVER
-</h1>
 
-<button id="restart" style="display:none;">
-    Restart
-</button>
+        <canvas id="gameCanvas"></canvas>
 
-    <script src="game.js"></script>
-    <h2 id="score">
-    Score: 0
-    </h2>
+
+        <div id="gameOver" class="game-over">
+
+            <h1>GAME OVER</h1>
+
+            <button id="restart">
+                Restart 🚀
+            </button>
+
+        </div>
+
+    </div>
+
+
+<script src="game.js"></script>
+
 </body>
 </html>
