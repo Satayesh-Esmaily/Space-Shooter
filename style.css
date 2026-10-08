@@ -15,7 +15,6 @@
 * { box-sizing: border-box; }
 
 body {
-    min-width: 340px;
     min-height: 100vh;
     margin: 0;
     background:
@@ -174,6 +173,17 @@ kbd.space-key { min-width: 55px; }
     .panel-footer { margin-top: 8px; }
     .page-footer { flex-wrap: wrap; font-size: 7px; }
     .page-footer > span:nth-child(2) { order: 3; width: 100%; }
+}
+
+@media (max-width: 400px) {
+    .topbar-edition { display: none; }
+    .topbar-status { font-size: 7px; }
+    .section-heading h1 { font-size: 31px; }
+    .viewport { aspect-ratio: 1; }
+    .overlay-content h2 { font-size: 36px; }
+    .overlay-icon { width: 25px; height: 25px; margin-bottom: 8px; font-size: 14px; }
+    .overlay-content .eyebrow { margin-bottom: 7px; }
+    .overlay-description { margin: 8px 0 11px; font-size: 10px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
